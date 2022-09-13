@@ -9,3 +9,10 @@ export async function storefront(query, variables = {}) {
   });
   return response.json();
 }
+
+export function formatPrice(number) {
+  return new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: "JPY",
+  }).format(number);
+}
