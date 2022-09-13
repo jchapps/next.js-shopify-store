@@ -3,8 +3,12 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { storefront } from "../utils";
 
-export default function Home() {
+const staticProducts = [];
+
+export default function Homepage({ products }) {
+  console.log({ products });
   return (
     <div class="bg-white">
       <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -40,3 +44,41 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  const { data } = await storefront(productsQuery);
+  return {
+    props: {
+      products: data.products,
+    },
+  };
+}
+
+const gql = String.raw;
+
+const productsQuery = gql`
+  query Products {
+    products(first: 15) {
+      edges {
+        node {
+          title
+          handle
+          tags
+          priceRangeV2 {
+            minVariantPrice {
+              amount
+            }
+          }
+          images(first: 1) {
+            edges {
+              node {
+                transformedSrc
+                altText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
