@@ -5,5 +5,8 @@ const nextConfig = {
   images: {
     domains: ["tailwindui.com"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 module.exports = nextConfig;
