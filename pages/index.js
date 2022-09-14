@@ -42,12 +42,11 @@ export default function Homepage({ products }) {
                         </a>
                       </h3>
                       <p className="mt-1 text-sm text-gray-500">
-                        {product.tags[2]}
+                        {product.tags[1]}
                       </p>
                     </div>
                     <p className="text-sm font-medium text-gray-900">
-                      {formatPrice(product.priceRange.minVariantPrice.amount) +
-                        10}
+                      {formatPrice(product.priceRange.minVariantPrice.amount)}
                     </p>
                   </div>
                 </div>

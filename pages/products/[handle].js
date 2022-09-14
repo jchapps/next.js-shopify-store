@@ -5,7 +5,6 @@ export default function Example({ product }) {
   const [isLoading, setIsLoading] = useState(false);
   const image = product.images.edges[0].node;
   const variantId = product.variants.edges[0].node.id;
-  console.log(variantId);
 
   async function checkout() {
     setIsLoading(true);
@@ -42,7 +41,7 @@ export default function Example({ product }) {
             <div className="flex gap-5 items-center justify-between">
               <div className="flex gap-3 items-center">
                 <span className="font-bold titles text-3xl">
-                  {formatPrice(product.priceRange.minVariantPrice.amount) + 10}
+                  {formatPrice(product.priceRange.minVariantPrice.amount)}
                 </span>
               </div>
             </div>
