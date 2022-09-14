@@ -1,4 +1,4 @@
-![screenshot](./screenshots/belatedbicycles.png)
+![screenshot](./screenshots/belatedbiycles.png)
 
 # 🚴 Belated Bicycles 
 
