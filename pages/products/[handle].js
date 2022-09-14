@@ -1,6 +1,7 @@
-const staticProducts = [];
+import { storefront } from "../../utils";
 
-export default function Homepage({}) {
+export default function Example({ product: singleProduct }) {
+  console.log({ singleProduct });
   return (
     <div className="col-span-1 flex justify-center">
       <div className="md:mt-20 mt-5">
@@ -32,3 +33,58 @@ export default function Homepage({}) {
     </div>
   );
 }
+
+export async function getStaticPaths() {
+  const { data } = await storefront(gql`
+    {
+      products(first: 6) {
+        edges {
+          node {
+            handle
+          }
+        }
+      }
+    }
+  `);
+  return {
+    paths: data.products.edges.map((product) => ({
+      params: { handle: product.node.handle },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { data } = await storefront(singleQuery, { handle: params.handle });
+  return {
+    props: {
+      product: data.productByHandle,
+    },
+  };
+}
+
+const gql = String.raw;
+
+const singleQuery = gql`
+  query SingleProduct($handle: String!) {
+    productByHandle(handle: $handle) {
+      title
+      description
+      updatedAt
+      tags
+      priceRange {
+        minVariantPrice {
+          amount
+        }
+      }
+      images(first: 1) {
+        edges {
+          node {
+            transformedSrc
+            altText
+          }
+        }
+      }
+    }
+  }
+`;
