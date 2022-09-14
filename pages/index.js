@@ -12,7 +12,7 @@ export default function Homepage({ products }) {
   console.log({ products });
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl py-12 px-4 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           Our Products
         </h2>
@@ -23,11 +23,11 @@ export default function Homepage({ products }) {
             return (
               <Link key={product.handle} href={`/products/${product.handle}`}>
                 <div className="group relative">
-                  <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                  <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-60 duration-300 lg:aspect-none lg:h-80">
                     <img
                       src={image.transformedSrc}
                       alt={image.altText}
-                      className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                      className="h-100 w-200 object-cover object-center lg:h-full lg:w-full"
                     />
                   </div>
                   <div className="mt-4 flex justify-between">
@@ -72,7 +72,7 @@ const gql = String.raw;
 
 const productsQuery = gql`
   query Products {
-    products(first: 20) {
+    products(first: 60) {
       edges {
         node {
           title

@@ -49,7 +49,7 @@ export default function Example({ product }) {
           <button
             onClick={checkout}
             type="button"
-            className="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-black mt-5 bg-green-200 hover:bg-green-600 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             {isLoading && (
               <svg
@@ -93,7 +93,7 @@ export default function Example({ product }) {
 export async function getStaticPaths() {
   const { data } = await storefront(gql`
     {
-      products(first: 20) {
+      products(first: 60) {
         edges {
           node {
             handle
