@@ -1,3 +1,9 @@
+![screenshot](./screenshots/home.png)
+
+# 🚴 Belated Bicycles 
+
+Headless shopify store built in Next.js with help from Shopify GraphQL API. Styled in tailwind.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
