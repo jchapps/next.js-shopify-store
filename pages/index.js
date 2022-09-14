@@ -16,7 +16,7 @@ export default function Homepage({ products }) {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           Our Products
         </h2>
-        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 cursor-pointer">
           {products.edges.map((item) => {
             const product = item.node;
             const image = product.images.edges[0].node;
