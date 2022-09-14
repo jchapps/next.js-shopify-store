@@ -1,6 +1,6 @@
 export async function storefront(query, variables = {}) {
   const response = await fetch(
-    "https://belatedbicycles.myshopify.com/api/2022-07/graphql.json",
+    "https://belatedbicycles.myshopify.com/api/2022-07/graphql.json/",
     {
       method: "POST",
       headers: {
