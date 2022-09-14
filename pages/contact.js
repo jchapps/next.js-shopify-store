@@ -12,7 +12,7 @@ export default function App() {
               Contact Us
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              We are happy to help you, don't hestitate to contact us!
+              We are happy to help you!
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
