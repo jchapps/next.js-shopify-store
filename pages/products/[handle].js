@@ -4,7 +4,15 @@ import { useState } from "react";
 export default function Example({ product }) {
   const [isLoading, setIsLoading] = useState(false);
   const image = product.images.edges[0].node;
-  const variableId = product.variants.edges[0].node.id;
+  const variantId = product.variants.edges[0].node.id;
+  console.log(variantId);
+
+  async function checkout() {
+    setIsLoading(true);
+    const { data } = await storefront(checkoutMutation, { variantId });
+    const { webUrl } = data.checkoutCreate.checkout;
+    window.location.href = webUrl;
+  }
 
   return (
     <div className="bg-white">
@@ -40,7 +48,7 @@ export default function Example({ product }) {
             </div>
           </div>
           <button
-            onClick={() => setIsLoading(!isLoading)}
+            onClick={checkout}
             type="button"
             className="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
@@ -148,7 +156,7 @@ const singleQuery = gql`
 const checkoutMutation = gql`
   mutation CheckoutCreate($variantId: ID!) {
     checkoutCreate(
-      input: { lineItems: { variantId: $variantID, quantity: 1 } }
+      input: { lineItems: { variantId: $variantId, quantity: 1 } }
     ) {
       checkout {
         webUrl
