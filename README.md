@@ -1,4 +1,4 @@
-![screenshot](./screenshots/home.png)
+![screenshot](./screenshots/belatedbicycles.png)
 
 # 🚴 Belated Bicycles 
 
