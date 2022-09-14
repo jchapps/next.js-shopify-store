@@ -75,7 +75,7 @@ export default function Example({ product }) {
             )}
             <svg
               aria-hidden="true"
-              class="mr-2 -ml-1 w-5 h-5"
+              className="mr-2 -ml-1 w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
