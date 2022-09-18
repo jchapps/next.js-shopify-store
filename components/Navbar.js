@@ -8,7 +8,7 @@ function Navbar() {
     <div>
       <nav className="bg-white border-gray-200 px-2 lg:px-6 py-1 dark:bg-gray-800">
         <div className="">
-          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <div className="flex items-center">
               <div className="flex items-center">
                 <img
@@ -49,7 +49,7 @@ function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-green-200 inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-green-200 inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white mr-6"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
