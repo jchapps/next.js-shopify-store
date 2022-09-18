@@ -110,7 +110,7 @@ function Navbar() {
 
                 <a
                   href="/contact"
-                  className="text-black hover:bg-green-2000 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-black hover:bg-green-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact
                 </a>
