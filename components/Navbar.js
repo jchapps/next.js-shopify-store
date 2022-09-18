@@ -49,7 +49,7 @@ function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-green-200 inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-green-800 focus:ring-white mr-6"
+                className="bg-green-200 inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-green-800 focus:ring-white mr-2 mt-2"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
