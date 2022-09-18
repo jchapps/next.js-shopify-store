@@ -16,12 +16,8 @@ export default function Example({ product }) {
   return (
     <div className="bg-white">
       <div className="col-span-1 flex justify-center content-center">
-        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 m-20 h-[100%] w-[100%] inset-0">
-          <img
-            src={image.transformedSrc}
-            alt={image.altText}
-            className="object-cover object-center"
-          />
+        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 mt-20 w-200 inset-0 ">
+          <img src={image.transformedSrc} alt={image.altText} className="" />
         </div>
         <div className="md:mt-20 mt-5">
           <h3 className="small-text text-sm font-semibold select-none ml-9 md:ml-0">
