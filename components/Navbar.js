@@ -24,21 +24,21 @@ function Navbar() {
                 <div className="flex items-center justify-around lg:order-2">
                   <a
                     href="/"
-                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-20 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                   >
                     Products
                   </a>
 
                   <a
                     href="/contact"
-                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-20 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                   >
                     Contact
                   </a>
 
                   <a
                     href="/login"
-                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-20 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
                   >
                     Login
                   </a>
