@@ -16,7 +16,7 @@ export default function Example({ product }) {
   return (
     <div className="bg-white">
       <div className="col-span-1 flex justify-center content-center">
-        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 mt-20 w-200 inset-0 ">
+        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 m-20 h-400 w-400 inset-0 ">
           <img src={image.transformedSrc} alt={image.altText} className="" />
         </div>
         <div className="md:mt-20 mt-5">
