@@ -62,7 +62,7 @@ export default function App() {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-black border-0 py-2 px-8 focus:outline-none hover:bg-green-200 duration-300 rounded text-lg">
+                <button className="flex mx-auto inline-block px-7 py-3 bg-green-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-grey-800 active:shadow-lg transition duration-150 ease-in-out">
                   Submit
                 </button>
               </div>
