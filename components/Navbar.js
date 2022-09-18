@@ -1,91 +1,133 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { Transition } from "@headlessui/react";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <header>
+    <div>
       <nav className="bg-white border-gray-200 px-2 lg:px-6 py-1 dark:bg-gray-800">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <a href="/" className="flex items-center">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/000/506/191/non_2x/bicycle-icon-design-vector.jpg"
-              className="mr-3 h-6 sm:h-40"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Belated Bicycles
-            </span>
-          </a>
-          <div className="flex items-center lg:order-2">
-            <a
-              href="/login"
-              className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-20 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-            >
-              Log in
-            </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <img
+                  className="mr-3 h-6 sm:h-40"
+                  src="https://static.vecteezy.com/system/resources/previews/000/506/191/non_2x/bicycle-icon-design-vector.jpg"
+                  alt="Workflow"
+                />
+              </div>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <a
+                    href="/"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                  >
+                    Products
+                  </a>
 
-            <button
-              data-collapse-toggle="mobile-menu-2"
-              type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="mobile-menu-2"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+                  <a
+                    href="/contact"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                  >
+                    Contact
+                  </a>
+
+                  <a
+                    href="/login"
+                    className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                  >
+                    Login
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              <svg
-                className="hidden w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </button>
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
-          <div
-            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2"
-          >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <li>
+        </div>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a
                   href="/"
-                  className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-6 lg:px-7 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Products
                 </a>
-              </li>
 
-              <li>
                 <a
                   href="/contact"
-                  className="text-gray-800 dark:text-white hover:bg-green-200 focus:ring-4 focus:ring-gray-300 duration-300 font-medium rounded-lg text-lg px-4 lg:px-5 py-2 lg:py-2.5 mr-20 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+                <a
+                  href="/login"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Login
+                </a>
+              </div>
+            </div>
+          )}
+        </Transition>
       </nav>
       <hr className="my-1 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-0.5" />
-    </header>
+    </div>
   );
 }
 
