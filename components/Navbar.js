@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <div>
       <nav className="bg-white border-gray-200 px-2 lg:px-6 py-1 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <div className="flex items-center">
               <div className="flex items-center">
@@ -16,7 +16,7 @@ function Navbar() {
                   src="https://static.vecteezy.com/system/resources/previews/000/506/191/non_2x/bicycle-icon-design-vector.jpg"
                   alt="Workflow"
                 />
-                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white mr-40">
                   Belated Bicycles
                 </span>
               </div>
