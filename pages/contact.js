@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <section className="text-gray-700 body-font relative">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-16 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               Contact Us
@@ -65,12 +65,6 @@ export default function App() {
                 <button className="flex mx-auto inline-block px-7 py-3 bg-green-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-grey-800 active:shadow-lg transition duration-150 ease-in-out">
                   Submit
                 </button>
-              </div>
-              <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-indigo-500"></a>
-                <p className="leading-normal my-5">
-                  <br />
-                </p>
               </div>
             </div>
           </div>
