@@ -16,10 +16,14 @@ export default function Example({ product }) {
   return (
     <div className="bg-white">
       <div className="col-span-1 flex justify-center content-center">
-        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 m-20 h-400 w-400 inset-0 ">
-          <img src={image.transformedSrc} alt={image.altText} className="" />
+        <div className="aspect-h-3 rounded-md lg:aspect-none lg:h-80 mt-20 ml-20">
+          <img
+            src={image.transformedSrc}
+            alt={image.altText}
+            className="w-246 md:w-246 lg:w-246"
+          />
         </div>
-        <div className="md:mt-20 mt-5">
+        <div className="md:mt-20 mt-5 mb-12">
           <h3 className="small-text text-sm font-semibold select-none ml-9 md:ml-0">
             BELATED BICYCLES
           </h3>
